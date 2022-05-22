@@ -69,7 +69,7 @@ const Dashboard = () => {
                 <SidebarContent>
                     <Menu iconShape="circle">
 
-
+                        <MenuItem icon={<BsFillHouseFill />}> <NavLink activeStyle={activeStyle} to={'/adminhome'}>Home</NavLink></MenuItem>
                         {!admin ?
                             (
                                 <>
@@ -79,7 +79,7 @@ const Dashboard = () => {
                                 </>
                             ) : (
                                 <>
-                                    <MenuItem icon={<BsFillHouseFill />}> <NavLink activeStyle={activeStyle} to={'/adminhome'}>Home</NavLink></MenuItem>
+
                                     <MenuItem icon={<BsFillCartFill />}> <Link activeStyle={activeStyle} to={`/projects`}>Manage Projects</Link></MenuItem>
                                     <MenuItem icon={<FaUserTie />}> <Link activeStyle={activeStyle} to={`/addprojects`}>Add Projects</Link></MenuItem>
                                     <MenuItem icon={<FaUserTie />}> <Link activeStyle={activeStyle} to={`/radio`}>Radio</Link></MenuItem>

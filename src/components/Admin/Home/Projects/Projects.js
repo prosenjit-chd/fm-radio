@@ -70,11 +70,10 @@ const Projects = () => {
                                 < Table className="custom-color shadow" striped bordered hover responsive>
                                     <thead>
                                         <tr>
-                                            <th>Num</th>
+                                            <th>Serial</th>
                                             <th>Img</th>
-                                            <th>Name</th>
-                                            <th>Client</th>
-                                            <th>LiveSite</th>
+                                            <th>Song Name</th>
+                                            <th>Station num</th>
                                             <th>Update</th>
                                             <th>Delete</th>
                                         </tr>
@@ -86,7 +85,6 @@ const Projects = () => {
                                                 <td><img style={{ height: "80px", textAlign: "center" }} className="img-fluid" src={e.coverphoto} alt="bike" /></td>
                                                 <td>{e.title}</td>
                                                 <td>{e.client}</td>
-                                                <td>{e.livesite}</td>
                                                 <td
                                                     onClick={() => {
                                                         setModalShow(true)

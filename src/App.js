@@ -29,14 +29,14 @@ function App() {
             <Route path="/radio" element={<Radio />}></Route>
 
             {/* Admin*/}
-            <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}></Route>
-            <Route exact path="/adminhome" element={<PrivateRoute><HomeLand /></PrivateRoute>}>
+            <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>}>
+              <Route exact path="/adminhome" element={<PrivateRoute><HomeLand /></PrivateRoute>}>
+              </Route>
+              <Route exact path="/projects" element={<PrivateRoute><Projects /></PrivateRoute>}>
+              </Route>
+              <Route path={`/addprojects`} element={<PrivateRoute><AddProjects /></PrivateRoute>}>
+              </Route>
             </Route>
-            <Route exact path="/projects" element={<PrivateRoute><Projects /></PrivateRoute>}>
-            </Route>
-            <Route path={`/addprojects`} element={<PrivateRoute><AddProjects /></PrivateRoute>}>
-            </Route>
-
 
             {/* autentication */}
             <Route path="/login" element={<Login />}>
