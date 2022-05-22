@@ -1,0 +1,9 @@
+.login-img {
+    /* background-image: url('../../../images/clock_login.jpg'); */
+    background-position: right 10px top 25px;
+    background-repeat: no-repeat;
+}
+
+.login-background{
+    background-color: white;
+}

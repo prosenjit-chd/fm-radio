@@ -1,0 +1,7 @@
+/* Custom style 404 page  */
+.notfound-bg {
+    background-image: url('https://i.ibb.co/KV3mpyV/banner2new.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
