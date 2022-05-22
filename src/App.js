@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Radio from './components/Radio/Radio';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,23 +19,24 @@ import NotFound from './components/Admin/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
+
       <AuthProvider>
         <Router>
           <Routes>
 
+            <Route path="/" element={<Radio />}></Route>
+            <Route path="/home" element={<Radio />}></Route>
+            <Route path="/radio" element={<Radio />}></Route>
+
             {/* Admin*/}
-            <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>}>
-              <Route exact path="/home" element={<PrivateRoute><HomeLand /></PrivateRoute>}>
-              </Route>
-              <Route exact path="/projects" element={<PrivateRoute><Projects /></PrivateRoute>}>
-              </Route>
-              <Route exact path="/radio" element={<PrivateRoute><Radio /></PrivateRoute>}>
-              </Route>
-
-              <Route path={`/addprojects`} element={<PrivateRoute><AddProjects /></PrivateRoute>}>
-              </Route>
-
+            <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}></Route>
+            <Route exact path="/adminhome" element={<PrivateRoute><HomeLand /></PrivateRoute>}>
             </Route>
+            <Route exact path="/projects" element={<PrivateRoute><Projects /></PrivateRoute>}>
+            </Route>
+            <Route path={`/addprojects`} element={<PrivateRoute><AddProjects /></PrivateRoute>}>
+            </Route>
+
 
             {/* autentication */}
             <Route path="/login" element={<Login />}>
@@ -45,6 +45,7 @@ function App() {
             </Route>
 
             <Route path="*" element={<NotFound />}></Route>
+
           </Routes>
         </Router>
       </AuthProvider>
